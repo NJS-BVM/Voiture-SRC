@@ -7,11 +7,13 @@ Dans cette partie on a dû assembler une voiture et écrire un programme pour pe
 
  Pour effectuer cela on a monté la voiture, hors moteurs qui ont déjà étés en place.
 On a complété un programme qui permets de faire avancer et tourner la voiture, Pour que la voiture tourne il faut faire avancer les roues d'un seul côté. On a aussi du changer des délais pour que la voiture tourne a 90°.
-Pour le programme du servo morteur et du capteur qui est assemblé dessus, on a changé la vitesse pour que le servo moteur tourne a une vitesse adéquate, pour recevoir les informations moins vite et pouvoir éviter les obstacles efficacement. Le servo moteur garde en mémoire la position dans laquelle il était pour réagir d'une manière adéquate a la situation. 
+Pour le programme du servo morteur et du capteur qui est assemblé dessus, on a changé la vitesse pour que le servo moteur tourne a une vitesse adéquate, pour recevoir les informations moins vite et pouvoir éviter les obstacles efficacement. Le servo moteur garde en mémoire la position dans laquelle il était pour
+réagir d'une manière adéquate a la situation. 
 
 Cependant on a rencontré plusieurs problèmes durant cette partie, puisque ce système use rapidement la batterie alors on a du la changer après s'être rendu compte que ça causait une incohérence par rapport au programme donné. On a aussi du raccorder la vitesse de rotation du servomoteur a la rotation de la voiture pour éviter des blocages liés au fait qu'il n'as pas le temps de tourner avant qu'il ne remarque encore une fois le même problème.
 
 Finalement on a obtenu une voiture qui peut se résoudre un labyrinthe assez serré sans problèmes et assez rapidement, en voici la présentation (montrer vidéo).
+https://user-images.githubusercontent.com/127784182/231291048-27291312-7802-4d3a-b18c-f4ac66f48377.mp4
 
 
 
