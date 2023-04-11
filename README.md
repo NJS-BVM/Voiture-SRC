@@ -1,5 +1,6 @@
 # Voiture-SRC
-Aujourd'hui on vas vous présenter le projet qu'on a réalisé en cours de système robotisés communiquants. Pour ce projet on nous a fourni un dispositif cherokey et on devait écrire plusieurs codes pour pouvoir réaliser plusieurs tâches et on vas vous présenter en quatres parties ce que l'on a effectué : dont trouver l'issu d'un labyrinthe, pouvoir télécommander cette voiture, suivre une  une route et retrouver une carte qui emmet des ondes bleutooh. ![IMG_20230125_170156](https://user-images.githubusercontent.com/127784182/231283957-0f7c9d0f-5690-4924-a7bf-8219262fbde1.jpg)
+Aujourd'hui on vas vous présenter le projet qu'on a réalisé en cours de système robotisés communiquants. Pour ce projet on nous a fourni un dispositif cherokey et on devait écrire plusieurs codes pour pouvoir réaliser plusieurs tâches et on vas vous présenter en quatres parties ce que l'on a effectué : dont trouver l'issu d'un labyrinthe, pouvoir télécommander cette voiture, suivre une  une route et retrouver une carte qui emmet des ondes bleutooh. 
+![IMG_20230125_170156](https://user-images.githubusercontent.com/127784182/231283957-0f7c9d0f-5690-4924-a7bf-8219262fbde1.jpg)
 
 
 I/Tout d'abord on a commencé en travaillant sur la résolution d'un Labyrinthe grâce a un capteur ultrasonore:
