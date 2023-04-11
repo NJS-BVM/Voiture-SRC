@@ -12,7 +12,7 @@ réagir d'une manière adéquate a la situation.
 
 Cependant on a rencontré plusieurs problèmes durant cette partie, puisque ce système use rapidement la batterie alors on a du la changer après s'être rendu compte que ça causait une incohérence par rapport au programme donné. On a aussi du raccorder la vitesse de rotation du servomoteur a la rotation de la voiture pour éviter des blocages liés au fait qu'il n'as pas le temps de tourner avant qu'il ne remarque encore une fois le même problème.
 
-Finalement on a obtenu une voiture qui peut se résoudre un labyrinthe assez serré sans problèmes et assez rapidement, en voici la présentation (montrer vidéo).
+Finalement on a obtenu une voiture qui peut se résoudre un labyrinthe assez serré sans problèmes et assez rapidement, en voici la présentation :
 https://user-images.githubusercontent.com/127784182/231291048-27291312-7802-4d3a-b18c-f4ac66f48377.mp4
 
 
