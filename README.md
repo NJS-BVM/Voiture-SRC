@@ -32,7 +32,7 @@ On a dû intégrer au code le programme pour faire avancer, reculer, tourner la 
 On a aussi fait en sorte de régler la vitesse de la voiture suivant si on était à la position maximale du joystick ou non. 
 L'application était disponible sur Android et IOS, avec des interfaces différentes, sauf que la version Android était un peu moins facile à utiliser surtout pour l'arrêt de la voiture étant donné qu'on devait retrouver le milieu exact du joystick pour qu'elle s'arrête.
 
-Finalement on a obtenu une voiture télécommandée par un téléphone qui effectue exactement ce que l'on veut par joystick jusqu'à l'augmentation de sa vitesse, en voici la présentation : 
+Finalement on a obtenu une voiture télécommandée par un téléphone qui effectue exactement ce que l'on veut par joystick jusqu'à l'augmentation de sa vitesse. En voici la présentation : 
 
 https://user-images.githubusercontent.com/127784182/232251727-6b7297f3-1829-4280-8a73-28d97ea25409.mp4
 
@@ -69,7 +69,7 @@ Pour le code on a alors branché la carte sur 7 sorties digitales où on récup�
 
 Cependant on a rencontré un problème étant donné que les cartes n'apercevaient pas les bonnes informations puisque le problème était lié au blanchement sur la broche D13, qui était bloqué comme horloge et la broche D8, qui était bloqué comme reset. Donc, étant donné qu'il n'y avait pas d'autres pins disponibles, on a dû enlever 2 câbles et donc on n'a plus qu'une précision de 32 bits et non 128.
 
-Finalement le code a marché et on a obtenu une voiture qui peut trouver une balise grâce aux ondes Lora envoyés par les cartes même si on a remarqué qu'il n'y a pas assez de précision et que la voiture tourne plus que prévu et atteint la carte moins rapidement, en voici la présentation :
+Finalement le code a marché et on a obtenu une voiture qui peut trouver une balise grâce aux ondes Lora envoyés par les cartes même si on a remarqué qu'il n'y a pas assez de précision et que la voiture tourne plus que prévu et atteint la carte moins rapidement. En voici la présentation :
 
 https://user-images.githubusercontent.com/127784182/232253913-4a487686-56f7-4cae-b0eb-1fcbda7eb489.mp4
 
