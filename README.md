@@ -1,28 +1,30 @@
 # Voiture-SRC
-Aujourd'hui on vas vous présenter le projet qu'on a réalisé en cours de système robotisés communiquants. Pour ce projet on nous a fourni un dispositif cherokey et on devait écrire plusieurs codes pour pouvoir réaliser plusieurs tâches et on vas vous présenter en quatres parties ce que l'on a effectué : dont trouver l'issu d'un labyrinthe, pouvoir télécommander cette voiture, suivre une  une route et retrouver une carte qui emmet des ondes bleutooh. 
+Aujourd'hui on va vous présenter le projet qu'on a réalisé en cours de systèmes robotisés communiquants. Pour ce projet on nous a fourni un dispositif cherokey et on devait écrire plusieurs codes pour pouvoir réaliser plusieurs tâches et on va vous présenter en quatre parties ce que l'on a effectué : dont trouver l'issue d'un labyrinthe, pouvoir télécommander cette voiture, suivre une route et retrouver une carte qui emmet des ondes Lora.
 
 ![IMG_20230125_170156](https://user-images.githubusercontent.com/127784182/231283957-0f7c9d0f-5690-4924-a7bf-8219262fbde1.jpg)
 
 
-I/Tout d'abord on a commencé en travaillant sur la résolution d'un Labyrinthe grâce a un capteur ultrasonore:
+I/Tout d'abord on a commencé en travaillant sur la résolution d'un Labyrinthe grâce à un capteur ultrasonore :
 Dans cette partie on a dû assembler une voiture et écrire un programme pour permettre à cette voiture de trouver un chemin dans un labyrinthe sans toucher les bords.
 
- Pour effectuer cela on a monté la voiture, hors moteurs qui ont déjà étés en place.
-On a complété un programme qui permets de faire avancer et tourner la voiture, Pour que la voiture tourne il faut faire avancer les roues d'un seul côté. On a aussi du changer des délais pour que la voiture tourne a 90°.
-Pour le programme du servo morteur et du capteur qui est assemblé dessus, on a changé la vitesse pour que le servo moteur tourne a une vitesse adéquate, pour recevoir les informations moins vite et pouvoir éviter les obstacles efficacement. Le servo moteur garde en mémoire la position dans laquelle il était pour
-réagir d'une manière adéquate a la situation. 
+Pour effectuer cela on a monté la voiture, hors moteurs qui ont déjà été en place.
+On a complété un programme qui permet de faire avancer et tourner la voiture, Pour que la voiture tourne il faut faire avancer les roues d'un côté et bloquer les roues de l'autre côté. On a aussi dû changer des délais pour que la voiture tourne à 90°.
+Pour le programme du servo-moteur et du capteur qui est assemblé dessus, on devait écrire un code qui balaye un certain arc, enregistre la valeur de l'angle, et s'il repère un obstacle il décide de tourner à gauche ou à droite en fonction de la valeur de l’angle. On  a aussi changé la vitesse pour que le servo-moteur tourne à une vitesse adéquate, pour recevoir les informations moins vite et pouvoir éviter les obstacles efficacement, sans réagir trop vite. Le servo-moteur garde en mémoire la position dans laquelle il était pour réagir d'une manière adéquate a la situation. 
 
-Cependant on a rencontré plusieurs problèmes durant cette partie, puisque ce système use rapidement la batterie alors on a du la changer après s'être rendu compte que ça causait une incohérence par rapport au programme donné. On a aussi du raccorder la vitesse de rotation du servomoteur a la rotation de la voiture pour éviter des blocages liés au fait qu'il n'as pas le temps de tourner avant qu'il ne remarque encore une fois le même problème.
+Cependant on a rencontré un problème durant cette partie, puisque ce système use rapidement la batterie alors on a dû la changer après s'être rendu compte que ça causait une incohérence par rapport au programme donné.
 
-Finalement on a obtenu une voiture qui peut se résoudre un labyrinthe assez serré sans problèmes et assez rapidement, en voici la présentation :
+Finalement on a obtenu une voiture qui peut résoudre un labyrinthe assez serré sans problème et assez rapidement, en voici la présentation :
 https://user-images.githubusercontent.com/127784182/231291048-27291312-7802-4d3a-b18c-f4ac66f48377.mp4
 
 
 
-2/Ensuite pour la deuxième Partie de ce projet on a travaillé sur un programme permettant de télécommander la voiture par bleutooh grâce à l'application "GoBle". On a pu réaliser cela puisque la carte peut être connecté au bleutooh. 
+2/Ensuite pour la deuxième partie de ce projet nous avons travaillé sur un programme permettant de télécommander la voiture par bluetooth grâce à l'application "Goble". On a pu réaliser cela puisque la carte peut être connectée au bluetooth. 
 
-Pour en effectuant cette partie, on a remarqué un fonctionnement par joystick sur l'application, où il y a deux axes,x en vertical et y en horizontal, sur l'axe x la voiture peut soit reculer soit avancer pour des valeurs comprises entre 1(recul) et 255(avance), et sur l'axe y la voiture vas soit a droite soit a gauche pour des valeurs comprises entre 1(gauche) et 255(droite) et le point 128;128 est le milieu, ou la voiture ne bouge plus. Ces informations sont transmises via bluetooth a la carte Roméo Blé.
-On a dû intégrer au code le programme pour faire avancer, reculer et tourner la voiture et des informations sur la direction et les vitesses. On a aussi réglé la vitesse de la voiture suivant si on était au bord du joystick ou non.
+En effectuant cette partie, on a remarqué un fonctionnement par joystick sur l'application, où il y a deux axes, x en vertical et y en horizontal, sur l'axe x la voiture peut soit reculer soit d'avancer pour des valeurs comprises entre 1(recul) et 255(avance), et sur l'axe y la voiture va soit à droite soit à gauche pour des valeurs comprises entre 1(gauche) et 255(droite) et le point 128:128 est le milieu, ou la voiture ne bouge plus. 
+Ces informations sont transmises via bluetooth a la carte Roméo BLE.
+On a dû intégrer au code le programme pour faire avancer, reculer, tourner la voiture et des informations sur la direction et les vitesses. 
+On a aussi fait en sorte de régler la vitesse de la voiture suivant si on était à la position maximale du joystick ou non. 
+L'application était disponible sur Android et IOS, avec des interfaces différentes, sauf que la version Android était un peu moins facile à utiliser surtout pour l'arrêt de la voiture étant donné qu'on devait retrouver le milieu exact du joystick pour qu'elle s'arrête.
 
 Finalement on a obtenu une voiture télécommandée par un téléphone qui effectue exactement ce que l'on veut par joystick jusqu'à l'augmentation de sa vitesse, en voici la présentation (montrer vidéo).
 
