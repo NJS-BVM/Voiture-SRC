@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/127784182/231291048-27291312-7802-4d3a
 
 
 
-2/Ensuite pour la deuxième partie de ce projet nous avons travaillé sur un programme permettant de télécommander la voiture par bluetooth grâce à l'application "Goble". On a pu réaliser cela puisque la carte peut être connectée au bluetooth. 
+II/Ensuite pour la deuxième partie de ce projet nous avons travaillé sur un programme permettant de télécommander la voiture par bluetooth grâce à l'application "Goble". On a pu réaliser cela puisque la carte peut être connectée au bluetooth. 
 
 En effectuant cette partie, on a remarqué un fonctionnement par joystick sur l'application, où il y a deux axes, x en vertical et y en horizontal, sur l'axe x la voiture peut soit reculer soit d'avancer pour des valeurs comprises entre 1(recul) et 255(avance), et sur l'axe y la voiture va soit à droite soit à gauche pour des valeurs comprises entre 1(gauche) et 255(droite) et le point 128:128 est le milieu, ou la voiture ne bouge plus. 
 Ces informations sont transmises via bluetooth a la carte Roméo BLE.
