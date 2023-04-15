@@ -16,7 +16,8 @@ Pour le programme du servo-moteur et du capteur qui est assemblé dessus, on dev
 
 Cependant on a rencontré un problème durant cette partie, puisque ce système use rapidement la batterie alors on a dû la changer après s'être rendu compte que ça causait une incohérence par rapport au programme donné.
 
-Finalement on a obtenu une voiture qui peut résoudre un labyrinthe assez serré sans problème et assez rapidement, en voici la présentation :
+Finalement on a obtenu une voiture qui peut résoudre un labyrinthe assez serré sans problème et assez rapidement. En voici la présentation :
+
 https://user-images.githubusercontent.com/127784182/231291048-27291312-7802-4d3a-b18c-f4ac66f48377.mp4
 
 
@@ -36,21 +37,25 @@ https://user-images.githubusercontent.com/127784182/232251727-6b7297f3-1829-4280
 
 
 
+
 III/Ensuite on devait manipuler une caméra qui permet de suivre une ligne grâce à des repères vectoriels, suivre une couleur, reconnaître un visage, un objet ou une couleur. Pour qu'elle sache quoi faire exactement on doit lui faire "apprendre" ce qu'elle doit suivre. On a utilisé cette caméra pour pouvoir faire une voiture qui suit une ligne, un objet et une couleur. L'intelligence se trouve dans la caméra car la carte qu'on utilise n'est pas assez puissante pour pouvoir faire cela.
 
 Pour effectuer le suivi de ligne, on a travaillé avec un mode qui permet de repérer par des vecteurs sous forme de flèches sur l'écran une ligne à suivre, et renvoie l'origine de la flèche. La flèche suit la moyenne des lignes du circuit c’est-à-dire s'il y a un angle la flèche ne suivra pas parfaitement cet angle mais tournera d'une manière plus arrondie. Pour le code, on a baissé la vitesse de la voiture pour donner plus de temps à la caméra pour créer la trajectoire. Pour le côté manuel on a dû incliner légèrement la caméra pour ne pas avoir de lignes parasites que la caméra aurait pu suivre, sans trop la baisser pour qu'elle puisse avoir assez de temps pour prévoir la trajectoire s'il y a des angles droits. 
 En voici la présentation :
+
 https://user-images.githubusercontent.com/127784182/232253027-1f8a748c-b44f-47c1-84f9-f7255fdf5f84.mp4
 
 
 
 Pour effectuer le suivi d'objets on a eu un problème de déplacement selon la position de l'objet sur l'écran, on a dû changer les valeurs du code de base. Pour analyser plus précisément le code dans certaines situations on a inséré des prints et on en a déduit que l'objet ne doit pas être trop près ~40 cm, sinon le programme bug.
 Le suivi de couleurs marche sur le même principe que le suivi d'objets mais ici il suit une couleur précise qu'il détecte. En voici la présentation avec suivis d'objets : 
+
 https://user-images.githubusercontent.com/127784182/232253471-dfdd43f2-8ec4-4cef-8527-36684830066b.mp4
 
 
 
 Finalement on a pu effectuer une route avec un feu rouge et un feu vert en utilisant deux caméras puisqu'une seule caméra ne pouvait pas effectuer un suivie de ligne et de couleur en même temps. Alors on a branché d'un côté une caméra qui suit une ligne représentant la route et de l'autre côté une caméra qui distingue les couleurs. Ces deux caméras ont été branchés à deux adresses différentes, une sur le branchement de base 0x32 et la deuxième en I2C comme ça on peut les distinguer et manipuler les deux en même temps. Pour rajouter un feu vert et donc une autre couleur que le rouge on a créé une variable stockée de la dernière couleur aperçue; s'il avait détecté du rouge, la voiture reste arrêtée, s'il détecte du vert la voiture avance. En voici la présentation :
+
 https://user-images.githubusercontent.com/127784182/232253787-6cb23b15-1874-41ea-987d-25507989b448.mp4
 
 
