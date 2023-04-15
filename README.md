@@ -1,4 +1,7 @@
 # Voiture-SRC
+Ce projet est réalisé dans le cadre du module Communication Sans Fil en Licence 1 à l’Université Côte d'Azur.
+
+# Description du projet
 Aujourd'hui on va vous présenter le projet qu'on a réalisé en cours de systèmes robotisés communiquants. Pour ce projet on nous a fourni un dispositif cherokey et on devait écrire plusieurs codes pour pouvoir réaliser plusieurs tâches et on va vous présenter en quatre parties ce que l'on a effectué : dont trouver l'issue d'un labyrinthe, pouvoir télécommander cette voiture, suivre une route et retrouver une carte qui emmet des ondes Lora.
 
 ![IMG_20230125_170156](https://user-images.githubusercontent.com/127784182/231283957-0f7c9d0f-5690-4924-a7bf-8219262fbde1.jpg)
@@ -43,13 +46,13 @@ Finalement on a pu effectuer une route avec un feu rouge et un feu vert en utili
 
 
 
-IV/La dernière partie de notre projet est d'obtenir un code qui permets a la voiture de retrouver une balise. On a utilisé deux cartes Lora, un récepteur branché sur la voiture qui allume les LEDs suivant la puissance reçue et un emetteur. 
-Pour effectuer cette partie on a décidé que la manière la plus simple était que la voiture tournait en rond en se rapprochant de petit a petit de l'émetteur. Pour cela on a décidé que la voiture allait tourner tout le temps a gauche et quand elle apercevait une augmentation de la valeur reçue elle avançait et accélérait légèrement plus et quand l'émetteur est suffisamment proche du récepteur la voiture s'arrête grâce a un changement d'état dans le code. 
-Pour le code on a alors branché la carte sur 7 sorties Digitales où on récupère la donnée et on la traduit en binaire pour envoyer la donnée sur chaque bit de la sortie reliée a l'entrée sur la carte de la voiture on récupère et reconverti le chiffre et si l'état est inférieur a un chiffre la voiture s'arrête.
+IV/La dernière partie de notre projet est d'obtenir un code qui permet à la voiture de retrouver une balise. On a utilisé deux cartes Lora, un récepteur branché sur la voiture qui allume les LEDs suivant la puissance reçue et un émetteur. 
+Pour effectuer cette partie on a décidé que la manière la plus simple était que la voiture tournait en rond en se rapprochant de petit à petit de l'émetteur. Pour cela on a décidé que la voiture allait tourner tout le temps à gauche et quand elle apercevait une augmentation de la valeur reçue elle avançait et accélérait légèrement plus et quand l'émetteur est suffisamment proche du récepteur la voiture s'arrête grâce à un changement d'état dans le code.
+Pour le code on a alors branché la carte sur 7 sorties digitales où on récupère la donnée et on la traduisit en binaire pour envoyer la donnée sur chaque bit de la sortie reliée à l'entrée sur la carte de la voiture on récupère et reconvertit le chiffre et si l'état est inférieur à un chiffre la voiture s'arrête.
 
-Cependant on a rencontré un problème étant donné que les cartes n'apercevaient pas les bonnes informations puisque le problème était lié au blanchement sur la broche D13, qui était bloqué comme horloge et la broche D8, qui était bloqué comme reset. Donc, étant donné qu'il n'y avait pas d'autres pin disponibles, on a dû enlever 2 bits a la précision et donc on n'as plus qu'une précision de 32bits et non 128. 
+Cependant on a rencontré un problème étant donné que les cartes n'apercevaient pas les bonnes informations puisque le problème était lié au blanchement sur la broche D13, qui était bloqué comme horloge et la broche D8, qui était bloqué comme reset. Donc, étant donné qu'il n'y avait pas d'autres pins disponibles, on a dû enlever 2 câbles et donc on n'a plus qu'une précision de 32 bits et non 128.
 
-Finalement le code a marché et on a obtenu une voiture qui peut trouver une balise grâce aux ondes bleutooh envoyés par les cartes même si on a remarqué qu'il n'y a pas assez de précision et que la voiture tourne plus que prévu et atteint la carte moins rapidement, en voici la présentation (montrer vidéo).
+Finalement le code a marché et on a obtenu une voiture qui peut trouver une balise grâce aux ondes Lora envoyés par les cartes même si on a remarqué qu'il n'y a pas assez de précision et que la voiture tourne plus que prévu et atteint la carte moins rapidement, en voici la présentation (montrer vidéo).
 
 
-Pour conclure on a donc effectué pour ce projet plusieurs codes qui permettent à la voiture de résoudre un labyrinthe, d'être télécommandé, de pouvoir suivre une route avec des feux et même de retrouver une balise. C'était très intéressant de pouvoir manipuler cette voiture par ces différentes manières et cela nous a permis d'apprendre beaucoup de choses que ce soit en programmation ou en manipulation de différents composants qu'on a utilisé.
+Pour conclure on a donc effectué pour ce projet plusieurs codes qui permettent à la voiture de résoudre un labyrinthe, d'être télécommandé, de pouvoir suivre une route avec des feux et même de retrouver une balise. C'était très intéressant de pouvoir manipuler cette voiture par ces différentes manières et cela nous a permis d'apprendre beaucoup de choses que ce soit en programmation ou en manipulation de différents composants qu'on a utilisés.
