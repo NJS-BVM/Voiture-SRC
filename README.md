@@ -2,7 +2,7 @@
 Ce projet a été réalisé dans le cadre du module Systemes Robotisés Communicants en Licence 2 à l’Université Côte d'Azur.
 
 # Description du projet
-Aujourd'hui on va vous présenter le projet qu'on a réalisé en cours de systèmes robotisés communiquants. Pour ce projet on nous a fourni un dispositif cherokey et on devait écrire plusieurs codes pour pouvoir réaliser plusieurs tâches et on va vous présenter en quatre parties ce que l'on a effectué : dont trouver l'issue d'un labyrinthe, pouvoir télécommander cette voiture, suivre une route et retrouver une carte qui emmet des ondes Lora.
+Nous allons vous présenter le projet qu'on a réalisé durant ce cours. Pour ce projet on nous a fourni un dispositif cherokey et on devait écrire plusieurs codes pour pouvoir réaliser plusieurs tâches et on va vous présenter en quatre parties ce que l'on a effectué : dont trouver l'issue d'un labyrinthe, pouvoir télécommander cette voiture, suivre une route et retrouver une carte qui emmet des ondes Lora.
 
 ![IMG_20230125_170156](https://user-images.githubusercontent.com/127784182/231283957-0f7c9d0f-5690-4924-a7bf-8219262fbde1.jpg)
 
