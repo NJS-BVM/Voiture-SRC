@@ -30,6 +30,7 @@ On a aussi fait en sorte de régler la vitesse de la voiture suivant si on étai
 L'application était disponible sur Android et IOS, avec des interfaces différentes, sauf que la version Android était un peu moins facile à utiliser surtout pour l'arrêt de la voiture étant donné qu'on devait retrouver le milieu exact du joystick pour qu'elle s'arrête.
 
 Finalement on a obtenu une voiture télécommandée par un téléphone qui effectue exactement ce que l'on veut par joystick jusqu'à l'augmentation de sa vitesse, en voici la présentation : 
+
 https://user-images.githubusercontent.com/127784182/232251727-6b7297f3-1829-4280-8a73-28d97ea25409.mp4
 
 
@@ -37,7 +38,8 @@ https://user-images.githubusercontent.com/127784182/232251727-6b7297f3-1829-4280
 
 III/Ensuite on devait manipuler une caméra qui permet de suivre une ligne grâce à des repères vectoriels, suivre une couleur, reconnaître un visage, un objet ou une couleur. Pour qu'elle sache quoi faire exactement on doit lui faire "apprendre" ce qu'elle doit suivre. On a utilisé cette caméra pour pouvoir faire une voiture qui suit une ligne, un objet et une couleur. L'intelligence se trouve dans la caméra car la carte qu'on utilise n'est pas assez puissante pour pouvoir faire cela.
 
-Pour effectuer le suivi de ligne, on a travaillé avec un mode qui permet de repérer par des vecteurs sous forme de flèches sur l'écran une ligne à suivre, et renvoie l'origine de la flèche. La flèche suit la moyenne des lignes du circuit c’est-à-dire s'il y a un angle la flèche ne suivra pas parfaitement cet angle mais tournera d'une manière plus arrondie. Pour le code, on a baissé la vitesse de la voiture pour donner plus de temps à la caméra pour créer la trajectoire. Pour le côté manuel on a dû incliner légèrement la caméra pour ne pas avoir de lignes parasites que la caméra aurait pu suivre, sans trop la baisser pour qu'elle puisse avoir assez de temps pour prévoir la trajectoire s'il y a des angles droits. En voici la présentation :
+Pour effectuer le suivi de ligne, on a travaillé avec un mode qui permet de repérer par des vecteurs sous forme de flèches sur l'écran une ligne à suivre, et renvoie l'origine de la flèche. La flèche suit la moyenne des lignes du circuit c’est-à-dire s'il y a un angle la flèche ne suivra pas parfaitement cet angle mais tournera d'une manière plus arrondie. Pour le code, on a baissé la vitesse de la voiture pour donner plus de temps à la caméra pour créer la trajectoire. Pour le côté manuel on a dû incliner légèrement la caméra pour ne pas avoir de lignes parasites que la caméra aurait pu suivre, sans trop la baisser pour qu'elle puisse avoir assez de temps pour prévoir la trajectoire s'il y a des angles droits. 
+En voici la présentation :
 https://user-images.githubusercontent.com/127784182/232253027-1f8a748c-b44f-47c1-84f9-f7255fdf5f84.mp4
 
 
