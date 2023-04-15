@@ -1,5 +1,5 @@
-# Voiture-SRC
-Ce projet est réalisé dans le cadre du module Communication Sans Fil en Licence 1 à l’Université Côte d'Azur.
+# Cherokey 4WD Mobile Platform
+Ce projet a été réalisé dans le cadre du module Systemes Robotisés Communicants en Licence 2 à l’Université Côte d'Azur.
 
 # Description du projet
 Aujourd'hui on va vous présenter le projet qu'on a réalisé en cours de systèmes robotisés communiquants. Pour ce projet on nous a fourni un dispositif cherokey et on devait écrire plusieurs codes pour pouvoir réaliser plusieurs tâches et on va vous présenter en quatre parties ce que l'on a effectué : dont trouver l'issue d'un labyrinthe, pouvoir télécommander cette voiture, suivre une route et retrouver une carte qui emmet des ondes Lora.
@@ -29,19 +29,27 @@ On a dû intégrer au code le programme pour faire avancer, reculer, tourner la 
 On a aussi fait en sorte de régler la vitesse de la voiture suivant si on était à la position maximale du joystick ou non. 
 L'application était disponible sur Android et IOS, avec des interfaces différentes, sauf que la version Android était un peu moins facile à utiliser surtout pour l'arrêt de la voiture étant donné qu'on devait retrouver le milieu exact du joystick pour qu'elle s'arrête.
 
-Finalement on a obtenu une voiture télécommandée par un téléphone qui effectue exactement ce que l'on veut par joystick jusqu'à l'augmentation de sa vitesse, en voici la présentation (montrer vidéo).
+Finalement on a obtenu une voiture télécommandée par un téléphone qui effectue exactement ce que l'on veut par joystick jusqu'à l'augmentation de sa vitesse, en voici la présentation : 
+https://user-images.githubusercontent.com/127784182/232251727-6b7297f3-1829-4280-8a73-28d97ea25409.mp4
 
 
 
 
 III/Ensuite on devait manipuler une caméra qui permet de suivre une ligne grâce à des repères vectoriels, suivre une couleur, reconnaître un visage, un objet ou une couleur. Pour qu'elle sache quoi faire exactement on doit lui faire "apprendre" ce qu'elle doit suivre. On a utilisé cette caméra pour pouvoir faire une voiture qui suit une ligne, un objet et une couleur. L'intelligence se trouve dans la caméra car la carte qu'on utilise n'est pas assez puissante pour pouvoir faire cela.
 
-Pour effectuer le suivi de ligne, on a travaillé avec un mode qui permet de repérer par des vecteurs sous forme de flèches sur l'écran une ligne à suivre, et renvoie l'origine de la flèche. La flèche suit la moyenne des lignes du circuit c’est-à-dire s'il y a un angle la flèche ne suivra pas parfaitement cet angle mais tournera d'une manière plus arrondie. Pour le code, on a baissé la vitesse de la voiture pour donner plus de temps à la caméra pour créer la trajectoire. Pour le côté manuel on a dû incliner légèrement la caméra pour ne pas avoir de lignes parasites que la caméra aurait pu suivre, sans trop la baisser pour qu'elle puisse avoir assez de temps pour prévoir la trajectoire s'il y a des angles droits.
+Pour effectuer le suivi de ligne, on a travaillé avec un mode qui permet de repérer par des vecteurs sous forme de flèches sur l'écran une ligne à suivre, et renvoie l'origine de la flèche. La flèche suit la moyenne des lignes du circuit c’est-à-dire s'il y a un angle la flèche ne suivra pas parfaitement cet angle mais tournera d'une manière plus arrondie. Pour le code, on a baissé la vitesse de la voiture pour donner plus de temps à la caméra pour créer la trajectoire. Pour le côté manuel on a dû incliner légèrement la caméra pour ne pas avoir de lignes parasites que la caméra aurait pu suivre, sans trop la baisser pour qu'elle puisse avoir assez de temps pour prévoir la trajectoire s'il y a des angles droits. En voici la présentation :
+https://user-images.githubusercontent.com/127784182/232253027-1f8a748c-b44f-47c1-84f9-f7255fdf5f84.mp4
+
+
 
 Pour effectuer le suivi d'objets on a eu un problème de déplacement selon la position de l'objet sur l'écran, on a dû changer les valeurs du code de base. Pour analyser plus précisément le code dans certaines situations on a inséré des prints et on en a déduit que l'objet ne doit pas être trop près ~40 cm, sinon le programme bug.
-Le suivi de couleurs marche sur le même principe que le suivi d'objets mais ici il suit une couleur précise qu'il détecte. 
+Le suivi de couleurs marche sur le même principe que le suivi d'objets mais ici il suit une couleur précise qu'il détecte. En voici la présentation avec suivis d'objets : 
+https://user-images.githubusercontent.com/127784182/232253471-dfdd43f2-8ec4-4cef-8527-36684830066b.mp4
 
-Finalement on a pu effectuer une route avec un feu rouge et un feu vert en utilisant deux caméras puisqu'une seule caméra ne pouvait pas effectuer un suivie de ligne et de couleur en même temps. Alors on a branché d'un côté une caméra qui suit une ligne représentant la route et de l'autre côté une caméra qui distingue les couleurs. Ces deux caméras ont été branchés à deux adresses différentes, une sur le branchement de base 0x32 et la deuxième en I2C comme ça on peut les distinguer et manipuler les deux en même temps. Pour rajouter un feu vert et donc une autre couleur que le rouge on a créé une variable stockée de la dernière couleur aperçue; s'il avait détecté du rouge, la voiture reste arrêtée, s'il détecte du vert la voiture avance. En voici la présentation (montrer vidéo).
+
+
+Finalement on a pu effectuer une route avec un feu rouge et un feu vert en utilisant deux caméras puisqu'une seule caméra ne pouvait pas effectuer un suivie de ligne et de couleur en même temps. Alors on a branché d'un côté une caméra qui suit une ligne représentant la route et de l'autre côté une caméra qui distingue les couleurs. Ces deux caméras ont été branchés à deux adresses différentes, une sur le branchement de base 0x32 et la deuxième en I2C comme ça on peut les distinguer et manipuler les deux en même temps. Pour rajouter un feu vert et donc une autre couleur que le rouge on a créé une variable stockée de la dernière couleur aperçue; s'il avait détecté du rouge, la voiture reste arrêtée, s'il détecte du vert la voiture avance. En voici la présentation :
+https://user-images.githubusercontent.com/127784182/232253787-6cb23b15-1874-41ea-987d-25507989b448.mp4
 
 
 
@@ -52,7 +60,7 @@ Pour le code on a alors branché la carte sur 7 sorties digitales où on récup�
 
 Cependant on a rencontré un problème étant donné que les cartes n'apercevaient pas les bonnes informations puisque le problème était lié au blanchement sur la broche D13, qui était bloqué comme horloge et la broche D8, qui était bloqué comme reset. Donc, étant donné qu'il n'y avait pas d'autres pins disponibles, on a dû enlever 2 câbles et donc on n'a plus qu'une précision de 32 bits et non 128.
 
-Finalement le code a marché et on a obtenu une voiture qui peut trouver une balise grâce aux ondes Lora envoyés par les cartes même si on a remarqué qu'il n'y a pas assez de précision et que la voiture tourne plus que prévu et atteint la carte moins rapidement, en voici la présentation (montrer vidéo).
-
+Finalement le code a marché et on a obtenu une voiture qui peut trouver une balise grâce aux ondes Lora envoyés par les cartes même si on a remarqué qu'il n'y a pas assez de précision et que la voiture tourne plus que prévu et atteint la carte moins rapidement, en voici la présentation :
+https://user-images.githubusercontent.com/127784182/232253913-4a487686-56f7-4cae-b0eb-1fcbda7eb489.mp4
 
 Pour conclure on a donc effectué pour ce projet plusieurs codes qui permettent à la voiture de résoudre un labyrinthe, d'être télécommandé, de pouvoir suivre une route avec des feux et même de retrouver une balise. C'était très intéressant de pouvoir manipuler cette voiture par ces différentes manières et cela nous a permis d'apprendre beaucoup de choses que ce soit en programmation ou en manipulation de différents composants qu'on a utilisés.
