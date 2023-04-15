@@ -50,7 +50,8 @@ https://user-images.githubusercontent.com/127784182/232253027-1f8a748c-b44f-47c1
 
 
 Pour effectuer le suivi d'objets on a eu un problème de déplacement selon la position de l'objet sur l'écran, on a dû changer les valeurs du code de base. Pour analyser plus précisément le code dans certaines situations on a inséré des prints et on en a déduit que l'objet ne doit pas être trop près ~40 cm, sinon le programme bug.
-Le suivi de couleurs marche sur le même principe que le suivi d'objets mais ici il suit une couleur précise qu'il détecte. En voici la présentation avec suivis d'objets : 
+Le suivi de couleurs marche sur le même principe que le suivi d'objets mais ici il suit une couleur précise qu'il détecte. 
+En voici la présentation avec suivis d'objets : 
 
 https://user-images.githubusercontent.com/127784182/232253471-dfdd43f2-8ec4-4cef-8527-36684830066b.mp4
 
