@@ -2,17 +2,17 @@
 Ce projet a été réalisé dans le cadre du module Systemes Robotisés Communicants en Licence 2 à l’Université Côte d'Azur.
 
 # Description du projet
-Nous allons vous présenter le projet qu'on a réalisé durant ce cours. Pour ce projet on nous a fourni un dispositif cherokey et on devait écrire plusieurs codes pour pouvoir réaliser plusieurs tâches et on va vous présenter en quatre parties ce que l'on a effectué : dont trouver l'issue d'un labyrinthe, pouvoir télécommander cette voiture, suivre une route et retrouver une carte qui emmet des ondes Lora.
+Pour ce projet nous avions un dispositif cherokey et nous devions écrire plusieurs codes pour pouvoir réaliser plusieurs tâches dont trouver l'issue d'un labyrinthe, pouvoir télécommander cette voiture, suivre une route et retrouver une carte qui emmet des ondes Lora.
 
 ![IMG_20230125_170156](https://user-images.githubusercontent.com/127784182/231283957-0f7c9d0f-5690-4924-a7bf-8219262fbde1.jpg)
 
 
-I/Tout d'abord on a commencé en travaillant sur la résolution d'un Labyrinthe grâce à un capteur ultrasonore :
+I/Tout d'abord on a commencé en travaillant sur la résolution d'un Labyrinthe grâce à un capteur à ultrasons :
 Dans cette partie on a dû assembler une voiture et écrire un programme pour permettre à cette voiture de trouver un chemin dans un labyrinthe sans toucher les bords.
 
-Pour effectuer cela on a monté la voiture, hors moteurs qui ont déjà été en place.
-On a complété un programme qui permet de faire avancer et tourner la voiture, Pour que la voiture tourne il faut faire avancer les roues d'un côté et bloquer les roues de l'autre côté. On a aussi dû changer des délais pour que la voiture tourne à 90°.
-Pour le programme du servo-moteur et du capteur qui est assemblé dessus, on devait écrire un code qui balaye un certain arc, enregistre la valeur de l'angle, et s'il repère un obstacle il décide de tourner à gauche ou à droite en fonction de la valeur de l’angle. On  a aussi changé la vitesse pour que le servo-moteur tourne à une vitesse adéquate, pour recevoir les informations moins vite et pouvoir éviter les obstacles efficacement, sans réagir trop vite. Le servo-moteur garde en mémoire la position dans laquelle il était pour réagir d'une manière adéquate a la situation. 
+Pour effectuer cela on a monté la voiture, hors moteurs qui été déjà en place.
+On a complété un programme qui permet de faire avancer et tourner la voiture. Pour que la voiture tourne il faut faire avancer les roues d'un côté et bloquer les roues de l'autre côté. On a aussi dû changer des délais pour que la voiture tourne à 90°.
+Pour le programme du servo-moteur et du capteur qui est assemblé dessus, on devait écrire un code qui balaye un certain arc, enregistre la valeur de l'angle, et s'il repère un obstacle il décide de tourner à gauche ou à droite en fonction de la valeur de l’angle. On a aussi changé la vitesse pour que le servo-moteur tourne à une vitesse adéquate, pour recevoir les informations moins vite et pouvoir éviter les obstacles efficacement, sans réagir trop vite. Le servo-moteur garde en mémoire la position dans laquelle il était pour réagir d'une manière adéquate a la situation. 
 
 Cependant on a rencontré un problème durant cette partie, puisque ce système use rapidement la batterie alors on a dû la changer après s'être rendu compte que ça causait une incohérence par rapport au programme donné.
 
