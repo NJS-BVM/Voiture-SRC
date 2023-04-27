@@ -26,11 +26,11 @@ https://user-images.githubusercontent.com/127784182/232254390-d7910056-4b92-47e6
 
 II/Ensuite pour la deuxième partie de ce projet nous avons travaillé sur un programme permettant de télécommander la voiture par bluetooth grâce à l'application "Goble". On a pu réaliser cela puisque la carte peut être connectée au bluetooth. 
 
-En effectuant cette partie, on a remarqué un fonctionnement par joystick sur l'application, où il y a deux axes, x en vertical et y en horizontal, sur l'axe x la voiture peut soit reculer soit d'avancer pour des valeurs comprises entre 1(recul) et 255(avance), et sur l'axe y la voiture va soit à droite soit à gauche pour des valeurs comprises entre 1(gauche) et 255(droite) et le point 128:128 est le milieu, ou la voiture ne bouge plus. 
-Ces informations sont transmises via bluetooth a la carte Roméo BLE.
+En effectuant cette partie, on a remarqué un fonctionnement par joystick sur l'application, où il y a deux axes, x en vertical et y en horizontal, sur l'axe x la voiture peut soit reculer soit d'avancer pour des valeurs comprises entre 1(recul) et 255(avance), et sur l'axe y la voiture va soit à droite soit à gauche pour des valeurs comprises entre 1(gauche) et 255(droite) puis le point 128:128 qui est le milieu, où la voiture ne bouge plus. 
+Ces informations sont transmises via bluetooth à la carte Roméo BLE.
 On a dû intégrer au code le programme pour faire avancer, reculer, tourner la voiture et des informations sur la direction et les vitesses. 
 On a aussi fait en sorte de régler la vitesse de la voiture suivant si on était à la position maximale du joystick ou non. 
-L'application était disponible sur Android et IOS, avec des interfaces différentes, sauf que la version Android était un peu moins facile à utiliser surtout pour l'arrêt de la voiture étant donné qu'on devait retrouver le milieu exact du joystick pour qu'elle s'arrête.
+L'application était disponible sur Android et IOS, avec des interfaces différentes. La version Android était un peu moins facile à utiliser surtout pour l'arrêt de la voiture étant donné qu'on devait retrouver le milieu exact du joystick pour qu'elle s'arrête.
 
 Finalement on a obtenu une voiture télécommandée par un téléphone qui effectue exactement ce que l'on veut par joystick jusqu'à l'augmentation de sa vitesse. En voici la présentation : 
 
