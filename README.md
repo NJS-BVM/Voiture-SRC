@@ -30,7 +30,8 @@ En effectuant cette partie, on a remarqué un fonctionnement par joystick sur l'
 Ces informations sont transmises via bluetooth à la carte Roméo BLE.
 On a dû intégrer au code le programme pour faire avancer, reculer, tourner la voiture et des informations sur la direction et les vitesses. 
 On a aussi fait en sorte de régler la vitesse de la voiture suivant si on était à la position maximale du joystick ou non. 
-L'application était disponible sur Android et IOS, avec des interfaces différentes. La version Android était un peu moins facile à utiliser surtout pour l'arrêt de la voiture étant donné qu'on devait retrouver le milieu exact du joystick pour qu'elle s'arrête.
+L'application était disponible sur Android et IOS, avec des interfaces différentes. 
+La version Android était un peu moins facile à utiliser surtout pour l'arrêt de la voiture étant donné qu'on devait retrouver le milieu exact du joystick pour qu'elle s'arrête.
 
 Finalement on a obtenu une voiture télécommandée par un téléphone qui effectue exactement ce que l'on veut par joystick jusqu'à l'augmentation de sa vitesse. En voici la présentation : 
 
